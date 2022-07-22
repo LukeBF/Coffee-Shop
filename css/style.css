@@ -3,6 +3,7 @@
     --primary-bg-light: #eeeee4;
     --secondary-bg-dark: #17171f;
     --highlight-bg-blue: #198cb8;
+    --grid-bg: #eeeee4; 
 
     --primary-font-dark: #17171f;
     --secondary-font-light: #f4f4f4;
@@ -22,11 +23,7 @@
 body
 {
     font-family: 'Montserrat', sans-serif;
-}
-
-.wrap
-{
-    min-height: calc(100vh - 19px);
+    line-height: 1.7;
 }
 
 /* Utilities - Repeated Styles */
@@ -36,6 +33,11 @@ body
     width: 90%;
     margin: 0 auto;
 }
+
+/* .wrap
+{
+    min-height: calc(100vh - 19px);
+} */
 
 a
 {
@@ -55,6 +57,14 @@ a
 .grid-col-3
 {
     grid-template-columns: repeat(3, 1fr);
+}
+
+.features-paragraph
+{
+    padding: 25px;
+    align-self: center;
+    justify-self: center;
+    padding: 0 50px;
 }
 
 .btn
@@ -150,6 +160,7 @@ header nav
 {
     column-gap: 2px;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .opening-hrs > div
@@ -172,15 +183,25 @@ header nav
 .features
 {
     background-color: var(--primary-bg-light);
-    margin: 30px 0;
+    /* margin: 30px 0; */
 }
 
-.features img
+.features > div > div img
 {
+    /* background-color: greenyellow; */
     width: 500px;
-    height: 500px;
+    height: 300px;
+    padding: 30px 0;
     object-fit: cover;
     justify-self: center;
+    /* border-radius: 5px; */
+}
+
+.features-paragraph > h2
+{
+    color: var(--font-heading);
+    font-family: 'Courgette', cursive;
+    font-size: 1.7rem;
 }
 
 /* Footer Styles */
