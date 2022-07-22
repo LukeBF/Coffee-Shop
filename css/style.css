@@ -1,11 +1,12 @@
 :root
 {
-    --primary-bg-light: #f4f4f4;
+    --primary-bg-light: #eeeee4;
     --secondary-bg-dark: #17171f;
-    --highlight-bg-blue: #45b6d8;
+    --highlight-bg-blue: #198cb8;
 
     --primary-font-dark: #17171f;
     --secondary-font-light: #f4f4f4;
+    --font-heading: #964a1d;
     --highlight-font: #45b6d8;
 }
 
@@ -44,6 +45,16 @@ a
 .grid
 {
     display: grid;
+}
+
+.grid-col-2
+{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-col-3
+{
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .btn
@@ -126,6 +137,50 @@ header nav
     width: 100%;
     height: 100%;
     opacity: 0.8;
+}
+
+/* Opening Hours Styles */
+#opening-hrs-section > h2
+{
+    text-align: center;
+    margin: 30px 0;
+}
+
+.opening-hrs
+{
+    column-gap: 2px;
+    text-align: center;
+}
+
+.opening-hrs > div
+{
+    padding-bottom: 12px;
+}
+
+.opening-hrs > div > h3
+{
+    padding: 12px 0;
+    color: var(--font-heading);
+}
+
+.opening-hrs > div > h4
+{
+    margin: 10px 0;
+}
+
+/* Features Styles */
+.features
+{
+    background-color: var(--primary-bg-light);
+    margin: 30px 0;
+}
+
+.features img
+{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    justify-self: center;
 }
 
 /* Footer Styles */
