@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/lightbox.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Molay Marketplace & Cafe</title>
 </head>
@@ -34,13 +35,15 @@
         <main>
             <!-- Hero Section -->
             <section id="hero-section">
-                <div class="overlay">
-                    <div class="hero-content grid">
-                        <img src="img/logo/molay_logo_transparent-4.png" class="logo">
+                <!-- Empty div to hold the overlay color -->
+                <div class="overlay"></div>
+                <!-- Start of hero content -->
+                <div class="hero-content grid">
+                    <img src="img/logo/molay_logo_transparent-4.png" class="logo">
+                    <div>
                         <a href="" class="btn hero-btn">View Menu</a>
                     </div>
-                </div>
-                
+                </div> 
             </section>
             <!-- Opening Hours -->
             <section id="opening-hrs-section">
@@ -115,10 +118,38 @@
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis earum obcaecati officia cumque, totam quos doloremque soluta eligendi iusto vero.
                             </p>
-                        </div>
-                    
+                        </div>                 
                     </div>
-                
+                </div>
+            </section>
+            <!-- Menu Gallery -->
+            <section id="menu-gallery" class="container grid grid-col-3">
+                <div>
+                    <a href="img/menus/breakfast-menu.png" target="_blank" data-lightbox="menugallery"><img src="img/menus/thumbnails/breakfast-menu-tn.JPG"></a>
+                </div>
+                <div>
+                    <a href="img/menus/breakfast-menu-pg2.png" target="_blank" data-lightbox="menugallery"><img src="img/menus/thumbnails/breakfast-menu-pg2-tn.JPG"></a>
+                </div>
+                <div>
+                    <a href="img/menus/lunch-menu.png" target="_blank" data-lightbox="menugallery"><img src="img/menus/thumbnails/lunch-menu-tn.JPG"></a>
+                </div>
+                <div>
+                    <a href="img/menus/sandwiches-menu.png" target="_blank" data-lightbox="menugallery"><img src="img/menus/thumbnails/sandwich-menu-tn.JPG"></a>
+                </div>
+                <div>
+                    <a href="img/menus/pizza-wrap-menu.png" target="_blank" data-lightbox="menugallery"><img src="img/menus/thumbnails/pizza-wrap-menu-tn.JPG"></a>
+                </div>
+                <div>
+                    <a href="img/menus/smoothies-and-juice-menu.png" target="_blank" data-lightbox="menugallery"><img src="img/menus/thumbnails/smoothies-and-juice-menu-tn.JPG"></a>
+                </div>
+                <div>
+                    <a href="img/menus/drinks-menu.png" target="_blank" data-lightbox="menugallery"><img src="img/menus/thumbnails/drinks-menu-tn.JPG"></a>
+                </div>
+                <div>
+                    <a href="img/menus/afternoon-tea.png" target="_blank" data-lightbox="menugallery"><img src="img/menus/thumbnails/afternoon-tea-tn.JPG"></a>
+                </div>
+                <div>
+                    <a href="img/menus/kids-menu.png" target="_blank" data-lightbox="menugallery"><img src="img/menus/thumbnails/kids-menu-tn.JPG"></a>
                 </div>
             </section>
         </main>
@@ -128,5 +159,6 @@
             Resolve Technologies &copy 2022
         </p>
     </footer>
+    <script src="js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>

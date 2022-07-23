@@ -1,7 +1,7 @@
 :root
 {
     --primary-bg-light: #eeeee4;
-    --secondary-bg-dark: #17171f;
+    --secondary-bg-dark: #08182f;
     --highlight-bg-blue: #198cb8;
     --grid-bg: #eeeee4; 
 
@@ -80,7 +80,7 @@ header
     background-color: var(--secondary-bg-dark);
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 3;
 }
 
 header li
@@ -116,6 +116,7 @@ header nav
     background-position: center center;
     background-size: cover;
     position: relative;
+    z-index: 2;
 }
 
 .hero-content
@@ -148,18 +149,24 @@ header nav
     width: 100%;
     height: 100%;
     opacity: 0.8;
+    z-index: -1;
 }
 
 /* Opening Hours Styles */
+#opening-hrs-section
+{
+    background-color: var(--primary-bg-light);
+    padding-top: 30px;
+}
+
 #opening-hrs-section > h2
 {
     text-align: center;
-    margin: 30px 0;
+    /* margin: 30px 0; */
 }
 
 .opening-hrs
 {
-    background-color: var(--primary-bg-light);
     column-gap: 2px;
     text-align: center;
     margin-bottom: 30px;
@@ -230,10 +237,26 @@ header nav
     font-size: 1.7rem;
 }
 
+/* Menu Gallery Styles */
+#menu-gallery
+{
+    justify-items: center;
+}
+
+#menu-gallery img
+{
+    padding: 10px;
+    transition: 1s;
+}
+
+#menu-gallery img:hover
+{
+    transform: scale(1.1);
+}
 /* Footer Styles */
 footer
 {
-    background-color: blueviolet;
+    background-color: var(--secondary-bg-dark);
     color: var(--secondary-font-light);
 }
 
