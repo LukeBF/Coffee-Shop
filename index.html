@@ -14,23 +14,28 @@
 
     <link rel="stylesheet" href="css/lightbox.min.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://kit.fontawesome.com/d98675db09.js" crossorigin="anonymous"></script>
     <title>Molay Marketplace & Cafe</title>
 </head>
 <body>
     <!-- Create a wrap class for sticky footer -->
-    <div class="wrap">
+    <div class="">
         <!-- Main header and navigation -->
         <header>
-            <div class="grid grid-header container">
-                <nav>
+            <nav class="navbar">
+                <a href="#" class="toggle-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+                <div class="navbar-links">
                     <ul>
                         <li><a href="">Home</a></li>
                         <li><a href="">About</a></li>
                         <li><a href="">Menu</a></li>
                         <li><a href="">Contact</a></li>
                     </ul>
-                </nav>
-            </div>
+                </div>
+            </nav>
         </header>
         <main>
             <!-- Hero Section -->
@@ -48,7 +53,7 @@
             <!-- Opening Hours -->
             <section id="opening-hrs-section">
                 <h2>Opening Hours</h2>
-                <div class="opening-hrs grid grid-col-3">
+                <div class="container opening-hrs grid grid-col-3">
                     <div>
                         <h3>MARKETPLACE</h3>
                         <h4>MON-SAT</h4>
@@ -91,7 +96,7 @@
                     <div class="grid grid-col-2">
                         <!-- Specialty Grocery -->
                         <div class="grid">
-                            <img src="img/marketplace-sample.jpg">
+                            <img src="img/marketplace-sample-2.jpg">
                         </div>
                         <div class="features-paragraph grid">
                             <h2>Specialty Grocery</h2>
@@ -111,7 +116,7 @@
                         </div>
                         <!-- Breakfast & Brunch -->
                         <div class="grid">
-                            <img src="img/brunch.jpg">
+                            <img src="img/brunch-2.jpg">
                         </div>
                         <div class="features-paragraph grid">
                             <h2>Breakfast & Brunch</h2>
@@ -123,42 +128,71 @@
                 </div>
             </section>
             <!-- Menu Gallery -->
-            <section id="menu-gallery" class="container grid grid-col-3">
-                <div>
-                    <a href="img/menus/breakfast-menu.png" target="_blank" data-lightbox="menugallery"><img src="img/menus/thumbnails/breakfast-menu-tn.JPG"></a>
-                </div>
-                <div>
-                    <a href="img/menus/breakfast-menu-pg2.png" target="_blank" data-lightbox="menugallery"><img src="img/menus/thumbnails/breakfast-menu-pg2-tn.JPG"></a>
-                </div>
-                <div>
-                    <a href="img/menus/lunch-menu.png" target="_blank" data-lightbox="menugallery"><img src="img/menus/thumbnails/lunch-menu-tn.JPG"></a>
-                </div>
-                <div>
-                    <a href="img/menus/sandwiches-menu.png" target="_blank" data-lightbox="menugallery"><img src="img/menus/thumbnails/sandwich-menu-tn.JPG"></a>
-                </div>
-                <div>
-                    <a href="img/menus/pizza-wrap-menu.png" target="_blank" data-lightbox="menugallery"><img src="img/menus/thumbnails/pizza-wrap-menu-tn.JPG"></a>
-                </div>
-                <div>
-                    <a href="img/menus/smoothies-and-juice-menu.png" target="_blank" data-lightbox="menugallery"><img src="img/menus/thumbnails/smoothies-and-juice-menu-tn.JPG"></a>
-                </div>
-                <div>
-                    <a href="img/menus/drinks-menu.png" target="_blank" data-lightbox="menugallery"><img src="img/menus/thumbnails/drinks-menu-tn.JPG"></a>
-                </div>
-                <div>
-                    <a href="img/menus/afternoon-tea.png" target="_blank" data-lightbox="menugallery"><img src="img/menus/thumbnails/afternoon-tea-tn.JPG"></a>
-                </div>
-                <div>
-                    <a href="img/menus/kids-menu.png" target="_blank" data-lightbox="menugallery"><img src="img/menus/thumbnails/kids-menu-tn.JPG"></a>
+            <section id="menu-gallery" class="">
+                <h2>Our Menus</h2>
+                <div class="menu-items container grid grid-col-3">
+                    <div>
+                        <a href="img/menus/breakfast-menu.png" target="_blank" data-lightbox="menugallery" class="grid"><img src="img/menus/thumbnails/breakfast-menu-tn.JPG"></a>
+                    </div>
+                    <div>
+                        <a href="img/menus/breakfast-menu-pg2.png" target="_blank" data-lightbox="menugallery" class="grid"><img src="img/menus/thumbnails/breakfast-menu-pg2-tn.JPG"></a>
+                    </div>
+                    <div>
+                        <a href="img/menus/lunch-menu.png" target="_blank" data-lightbox="menugallery" class="grid"><img src="img/menus/thumbnails/lunch-menu-tn.JPG"></a>
+                    </div>
+                    <div>
+                        <a href="img/menus/sandwiches-menu.png" target="_blank" data-lightbox="menugallery" class="grid"><img src="img/menus/thumbnails/sandwich-menu-tn.JPG"></a>
+                    </div>
+                    <div>
+                        <a href="img/menus/pizza-wrap-menu.png" target="_blank" data-lightbox="menugallery" class="grid"><img src="img/menus/thumbnails/pizza-wrap-menu-tn.JPG"></a>
+                    </div>
+                    <div>
+                        <a href="img/menus/smoothies-and-juice-menu.png" target="_blank" data-lightbox="menugallery" class="grid"><img src="img/menus/thumbnails/smoothies-and-juice-menu-tn.JPG"></a>
+                    </div>
+                    <div>
+                        <a href="img/menus/drinks-menu.png" target="_blank" data-lightbox="menugallery" class="grid"><img src="img/menus/thumbnails/drinks-menu-tn.JPG"></a>
+                    </div>
+                    <div>
+                        <a href="img/menus/afternoon-tea.png" target="_blank" data-lightbox="menugallery" class="grid"><img src="img/menus/thumbnails/afternoon-tea-tn.JPG"></a>
+                    </div>
+                    <div>
+                        <a href="img/menus/kids-menu.png" target="_blank" data-lightbox="menugallery" class="grid"><img src="img/menus/thumbnails/kids-menu-tn.JPG"></a>
+                    </div>
                 </div>
             </section>
         </main>
+        <footer>
+            <div class="container grid grid-col-2">
+                <div>
+                    <h2>Find us on</h2>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook-messenger"></i>
+                </div>
+                <div class="grid inner-grid-footer">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>
+                        1-868-366-6529
+                    </p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>
+                        57 Schneider Gardens<br>
+                        Petit Valley<br>
+                        Trinidad & Tobago
+                    </p>
+                    <i class="fa-solid fa-at"></i>
+                    <p>
+                        @molaymarket@gmail.com
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <p>
+                &copy 2022 Developed by Resolve Technologies
+            </p>
+        </footer>
     </div>
-    <footer>
-        <p>
-            Resolve Technologies &copy 2022
-        </p>
-    </footer>
     <script src="js/lightbox-plus-jquery.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
