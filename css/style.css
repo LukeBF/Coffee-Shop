@@ -26,6 +26,12 @@ body
     line-height: 1.7;    
 }
 
+.wrap
+{
+    min-height: calc(100vh - 344.75px);
+    width: 100%;
+}
+
 /* Utilities - Repeated Styles */
 .container
 {
@@ -34,15 +40,18 @@ body
     margin: 0 auto;
 }
 
-/* .wrap
+.hide
 {
-    min-height: calc(100vh - 19px);
-    width: 100%;
-} */
+    display: none;
+}
 
-a,li
+a
 {
     text-decoration: none;
+}
+
+li
+{
     list-style: none;
 }
 
@@ -84,99 +93,28 @@ h2
 }
 
 /* Header Styles */
-.navbar
+header
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--secondary-bg-dark);
+    height: 50px;
 }
 
-.navbar-links > ul
-{
-    display: flex;
-}
-
-.navbar-links li a
-{
-    color: var(--secondary-font-light);
-    padding: 16px;
-    display: block;
-}
-
-.toggle-btn
-{
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    color: var(--secondary-font-light);
-    display: none;
-}
-/* header
-{
-    background-color: var(--secondary-bg-dark);
-    position: sticky;
-    top: 0;
-    z-index: 3;
-} */
-
-/* header li
+.nav-links > li
 {
     display: inline-block;
     padding: 16px 32px;
-} */
+}
 
-/* header li > a
+.header-grid
 {
-    color: var(--secondary-font-light);
-    font-size: 1.1rem;
-} */
+    justify-items: center;
+    align-items: center;
+}
 
-/* header nav
-{
-    justify-self: center;
-} */
-
-/* .navbar
-{
-    grid-template-columns: 1fr 50px;
-} */
-
-/* .navbar-links
-{
-    justify-self: center;
-} */
-
-/* .navbar > div:nth-child(2) a
-{
-    color: var(--secondary-font-light);
-    align-self: center;
-    justify-self: center;
-    font-size: 1.2rem;
-} */
-
-/* .toggle-btn
+.header-grid > i
 {
     position: absolute;
-    top: 1rem;
-    right: 1.2rem;
-    font-size: 1.2rem;
-    color: var(--secondary-font-light);
-    display: none;
-} */
-
-/* #hamburger-menu
-{
-    justify-self: center;
-    align-self: center;
-    color: var(--secondary-font-light);
-    font-size: 1.3em;
-} */
-
-/* #hamburger-menu > i
-{
-    padding: 8px;
-} */
+    right: 32px;
+}
 
 /* Hero Section */
 #hero-section
@@ -377,287 +315,36 @@ footer > div > div:nth-child(2) > p
 
 /* ********** MEDIA QUERIES ********* */
 
-/* X-Large devices (large desktops, less than 1400px) */
-@media (max-width: 1399.98px)
-{
-    #hero-section
-    {
-        height: 100vh;
-    }
-
-}
-
-/* Large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px)
-{
-    
-}
-
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) 
 {
-    .grid-col-2
-    {
-        grid-template-columns: 1fr;
-    }
-
-    .grid-col-3
-    {
-        grid-template-columns: 1fr;
-    }
-
-    /* Nav */
-    .toggle-btn
-    {
-        display: flex;
-        font-size: 1.5rem;
-        margin-right: 25px;
-        margin-top: 15px;
-    }
-
-    .navbar-links
-    {
-        display: none;
-    }
-
-    .navbar
-    {
-        flex-direction: column;
-    }
-
-    .navbar-links ul
-    {
-        flex-direction: column;
-    }
-
-    .navbar-links li
-    {
-        text-align: center;
-    }
-
-    .navbar-links.active
-    {
-        display: flex;
-    }
-
-    #hero-section
-    {
-        z-index: -1;
-    }
-
-    #hero-section
-    {
-        height: 100vh;
-    }
-
-    .hero-content > img
-    {
-        width: 60%;
-    }
-
-    .hero-content > div > a
-    {
-        padding: 16px 32px;
-    }
-
-    .hero-content > div
-    {
-        align-self: center;
-    }
-
-    #opening-hrs-section 
-    {
-        padding-bottom: 30px;
-    }
-
-    .features > div > div > div:nth-child(3)
-    {
-        grid-row-start: 4;
-        grid-row-end: span 1;
-    }
-
-    .features > div > div > div:nth-child(6) > p
-    {
-        padding-bottom: 30px;
-    }
-
-    #about-us > div p
-    {
-        padding-bottom: 30px;
-    }
-
-    #menu-gallery > div
-    {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .menu-items > div img
-    {
-        justify-self: center;
-    }
-
-    #menu-gallery > div img
-    {
-        width: 60%;
-    }
+    
 }
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) 
 {
-    .grid-col-2
-    {
-        grid-template-columns: 1fr;
-    }
+   .nav-links
+   {
+        display: none;
+   }
 
-    .grid-col-3
-    {
-        grid-template-columns: 1fr;
-    }
-
-    .grid-header
-    {
-        grid-template-columns: 1fr;
-    }
-
-    #hero-section
-    {
-        height: 100vh;
-    }
-
-    .hero-content > img
-    {
-        width: 50%;
-    }
-
-    .hero-content > div
-    {
-        align-self: center;
-    }
-
-    #opening-hrs-section 
-    {
-        padding-bottom: 30px;
-    }
-
-    .features > div > div > div:nth-child(3)
-    {
-        grid-row-start: 4;
-        grid-row-end: span 1;
-    }
-
-    .features > div > div > div:nth-child(6) > p
-    {
-        padding-bottom: 30px;
-    }
-
-    #about-us > div p
-    {
-        padding-bottom: 30px;
-    }
+   .header-grid > i
+   {
+        display: inline;
+        top: 16px;
+   }
+   
 
 }
 
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) 
 {
-    .grid-col-2
-    {
-        grid-template-columns: 1fr;
-    }
-
-    .grid-col-3
-    {
-        grid-template-columns: 1fr;
-    }
-
-    #menu-gallery > div
-    {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .menu-items > div img
-    {
-        justify-self: center;
-    }
-
-    #menu-gallery > div img
-    {
-        width: 60%;
-    }
-
-    #hero-section
-    {
-        z-index: -1;
-    }
-
-    #hero-section
-    {
-        height: 100vh;
-    }
-
-    .hero-content > img
-    {
-        width: 50%;
-    }
-
-    #opening-hrs-section 
-    {
-        padding-bottom: 30px;
-    }
-
-    .features > div > div img
-    {
-        max-width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-
-    .features > div > div > div:nth-child(3)
-    {
-        grid-row-start: 4;
-        grid-row-end: span 1;
-    }
-
-    .features > div > div > div:nth-child(6) > p
-    {
-        padding-bottom: 30px;
-    }
-
-    #about-us > div p
-    {
-        padding-bottom: 30px;
-    }
+    
 
 }
 
-@media (max-width: 575.98px) 
-{
-    .hero-content > img
-    {
-        width: 60%;
-    }
-
-    .hero-content > div
-    {
-        align-self: center;
-    }
-
-    #menu-gallery > div
-    {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .menu-items > div img
-    {
-        justify-self: center;
-    }
-
-    #menu-gallery > div img
-    {
-        width: 60%;
-    }
-}
 
 /* XX-Large devices (larger desktops) */
 /* No media query since the xxl breakpoint has no upper bound on its width */
