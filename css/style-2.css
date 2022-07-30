@@ -99,6 +99,35 @@ header
     z-index: 1;
 }
 
+/* *****ABOUT-US***** */
+/* #about-us 
+{
+    background-color: green;
+} */
+
+#about-us > div
+{
+    align-items: center;
+}
+
+#about-us > div > div
+{
+    margin: 30px 0;
+}
+
+#about-us > div img
+{
+    width: 60%;
+    height: auto;
+    align-self: center;
+    justify-self: center;
+}
+
+#about-us > div > div:nth-child(2)
+{
+    padding: 0 25px;
+}
+
 /* *****FOOTER***** */
 footer
 {
