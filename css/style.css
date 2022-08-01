@@ -315,6 +315,13 @@ footer > div > div:nth-child(2) > p
 
 /* ********** MEDIA QUERIES ********* */
 
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) 
+{
+
+}
+
+
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) 
 {
@@ -333,6 +340,11 @@ footer > div > div:nth-child(2) > p
    {
         display: inline;
         top: 16px;
+   }
+
+   .grid-col-3
+   {
+    grid-template-columns: 1fr;
    }
    
 

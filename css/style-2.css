@@ -1,14 +1,13 @@
 :root
 {
-    --primary-bg-light: #eeeee4;
-    --secondary-bg-dark: #08182f;
-    --highlight-bg-blue: #198cb8;
-    --grid-bg: #eeeee4; 
+    --bg-light: #eeeee4;
+    --bg-dark: #08182f;
+    --bg-highlight-teal: #007474; 
 
     --primary-font-dark: #17171f;
     --secondary-font-light: #f4f4f4;
     --font-heading: #964a1d;
-    --highlight-font: #45b6d8;
+
 }
 
 /* CSS Reset */
@@ -24,6 +23,16 @@ body
 {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.7;    
+}
+
+h3
+{
+    color: var(--font-heading);
+}
+
+h2
+{
+    text-underline-position: left;
 }
 
 .wrap
@@ -65,10 +74,15 @@ li
     grid-template-columns: repeat(2, 1fr);
 }
 
+.grid-col-3
+{
+    grid-template-columns: repeat(3, 1fr);
+}
+
 /* *****HEADER/NAV***** */
 header
 {
-    background-color: var(--secondary-bg-dark);
+    background-color: var(--bg-dark);
     height: 60px;
 }
 
@@ -99,12 +113,54 @@ header
     z-index: 1;
 }
 
-/* *****ABOUT-US***** */
-/* #about-us 
+/* *****HERO SECTION***** */
+#hero-section
 {
-    background-color: green;
-} */
+    position: relative;
+    background-image: url("../img/hero-sample.jpg");
+    background-repeat: none;
+    background-position: center center;
+    background-size: cover;
+    z-index: 2;
+}
 
+.overlay
+{
+    position: absolute;
+    background-color: var(--bg-dark);
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.hero-content
+{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.hero-content > img
+{
+    width: 100%;
+}
+
+.hero-content > div
+{
+    padding: 10px 0 30px 0;
+    text-align: center;
+}
+
+.hero-content > div > a
+{
+    background-color: var(--font-heading);
+    color: var(--secondary-font-light);
+    padding: 16px 32px;
+    border-radius: 5px;
+
+}
+
+/* *****ABOUT-US***** */
 #about-us > div
 {
     align-items: center;
@@ -128,15 +184,101 @@ header
     padding: 0 25px;
 }
 
+/* *****OPENING-HOURS***** */
+#opening-hrs-section
+{
+    text-align: center;
+    background-color: var(--bg-light);
+}
+
+#opening-hrs-section > div
+{
+    padding: 30px 0;
+}
+
+#opening-hrs-section > div > h2
+{
+    margin-bottom: 30px;
+}
+
+.opening-hrs > div > h3
+{
+    padding: 10px;
+}
+
+/* *****FEATURES***** */
+#features-section
+{
+    position: relative;
+}
+
+#features-section > img
+{
+    position: absolute;
+    bottom: -20vh;
+    right: 0;
+    opacity: 0.2;
+    width: 30%;
+    z-index: -1;
+}
+
+#features-section > div > div img
+{
+    width: 25%;
+}
+
+#features-section > div > div > div
+{
+    padding: 20px;
+}
+
+#features-section > div > div > div:nth-child(1),
+#features-section > div > div > div:nth-child(4),
+#features-section > div > div > div:nth-child(5)
+{
+    width: 75%;
+    margin: 0 auto;
+}
+
+
+#features-section > div > div > div:nth-child(2),
+#features-section > div > div > div:nth-child(3),
+#features-section > div > div > div:nth-child(6)
+{
+    height: 50%;
+    margin: auto 0;
+}
+
+#features-section > div > div img
+{ 
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+}
+
 /* *****FOOTER***** */
 footer
 {
-    background-color: gray;
+    background-color: var(--bg-dark);
+    color: var(--secondary-font-light);
 }
 
 footer > div
 {
     justify-items: center;
+    padding: 30px 0;
+}
+
+footer > div > div i
+{
+    padding: 16px 16px;
+    font-size: 1.5rem;
+    color: var(--font-heading);
+}
+
+footer > div > div > h2
+{
+    text-align: center;
 }
 
 .inner-grid-footer
@@ -154,57 +296,57 @@ footer > div > div:nth-child(2) > i
     justify-self: center;
 }
 
-/* *****HERO SECTION***** */
-#hero-section
-{
-    position: relative;
-    background-image: url("../img/hero-sample.jpg");
-    background-repeat: none;
-    background-position: center center;
-    background-size: cover;
-}
-
-.hero-content
-{
-    width: 50%;
-    margin: 0 auto;
-    /* justify-items: center; */
-}
-
-.hero-content > img
-{
-    width: 100%;
-}
-
-.hero-content > div
-{
-    padding: 10px 0 30px 0;
-    text-align: center;
-}
-
-.hero-content > div > a
-{
-    background-color: var(--highlight-bg-blue);
-    color: var(--secondary-font-light);
-    padding: 16px 32px;
-
-}
-
 /* *****MEDIA QUERIES***** */
 /* X-Large devices (large desktops, less than 1400px) */
 @media (max-width: 1399.98px) 
 {
-
+    #features-section > div > div img
+   {
+    height: 30vh;
+   }
 }
 
 /* Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) 
 {
-    
+   
 }
 
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
+
+    .grid-col-2
+    {
+        grid-template-columns: 1fr;
+    }
+
+    #features-section > div > div > div:nth-child(1), #features-section > div > div > div:nth-child(4), #features-section > div > div > div:nth-child(5)
+    {
+        max-width: 100%;
+        justify-items: center;
+    }
+ 
+    #features-section > div > div > div:nth-child(2), #features-section > div > div > div:nth-child(3), #features-section > div > div > div:nth-child(6)
+    {
+        height: auto;    
+        margin: auto 0;
+    }
+
+    #features-section > div > div > div > h2
+    {
+        text-align: center;
+    }
+
+    #features-section > div > div > div:nth-child(4)
+    {
+        grid-row-start: 3;
+        grid-row-end: span 1;
+    }
+
+    #features-section > img
+    {
+         bottom: 0;
+    }
 
 }
 
@@ -227,6 +369,51 @@ footer > div > div:nth-child(2) > i
         grid-template-columns: 1fr;
     }
 
+    .grid-col-3
+   {
+        grid-template-columns: 1fr;
+   }
+
+   .opening-hrs
+   {
+        width: 50%;
+        margin: 0 auto;
+        background-color: var(--bg-dark);
+   }
+
+   .opening-hrs > div
+   {
+        margin-bottom: 10px;
+   }
+
+   .opening-hrs > div > h4,
+   .opening-hrs > div > p
+   {
+        color: var(--secondary-font-light);
+   }
+
+   #opening-hrs-section > div > h2
+   {
+        margin-bottom: 10px;
+   }
+
+   #opening-hrs-section > div 
+   {
+    padding-top: 10px;
+   }
+
+
+
+   #features-section > div > div > div:nth-child(2), #features-section > div > div > div:nth-child(3), #features-section > div > div > div:nth-child(6)
+   {
+    height: auto;    
+    margin: auto 0;
+   }
+
+   #features-section > img
+   {
+        bottom: 0;
+   }
 }
 
 /* X-Small devices (portrait phones, less than 576px) */
