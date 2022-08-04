@@ -163,7 +163,6 @@ header
     color: var(--secondary-font-light);
     padding: 16px 32px;
     border-radius: 5px;
-
 }
 
 /* *****ABOUT-US***** */
@@ -394,7 +393,7 @@ footer > div > div:nth-child(2) > i
 
     .hero-content
     {
-        padding-top: 5vh;
+        padding-top: 3vh;
     }
 
     #features-section > div > div > div:nth-child(1), #features-section > div > div > div:nth-child(4), #features-section > div > div > div:nth-child(5)
@@ -433,6 +432,11 @@ footer > div > div:nth-child(2) > i
     .menu-items img
     {
         justify-self:center
+    }
+
+    .hero-content > div
+    {
+        display: none;
     }
 
 }
@@ -522,6 +526,5 @@ footer > div > div:nth-child(2) > i
     {
         display: none;
     }
-    
 
 }
