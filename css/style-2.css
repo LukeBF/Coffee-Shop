@@ -82,14 +82,20 @@ li
 /* *****HEADER/NAV***** */
 header
 {
-    background-color: var(--bg-dark);
+    background-color: var(--bg-light);
     /* height: 6vh; */
 }
 
 .navbar
 {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-title > a
+{
+    display: flex;
     align-items: center;
 }
 
@@ -100,23 +106,25 @@ header
 
 .navbar-links a
 {
-    color: var(--secondary-font-light);
+    color: var(--primary-font-dark);
     padding: 1rem;
     display: block;
-}
-
-.brand-title
-{
-    color: var(--secondary-font-light);
 }
 
 .toggle-btn
 {
     color: var(--secondary-font-light);
     position: absolute;
-    top: .5rem;
+    top: 1rem;
     right: 2rem;
     display: none;
+    background-color: var(--bg-dark);
+    border-radius: 100%;
+}
+
+.toggle-btn > i
+{
+    padding: 10px;
 }
 
 /* *****HERO SECTION***** */
@@ -143,7 +151,9 @@ header
 .hero-content
 {
     width: 50%;
+    height: 50vh;
     margin: 0 auto;
+    
 }
 
 .hero-content > img
@@ -327,6 +337,12 @@ footer > div > div:nth-child(2) > i
     justify-self: center;
 }
 
+footer > p
+{
+    text-align: center;
+    font-size: 0.9rem;
+}
+
 /* *****MEDIA QUERIES***** */
 /* X-Large devices (large desktops, less than 1400px) */
 @media (max-width: 1399.98px) 
@@ -340,7 +356,7 @@ footer > div > div:nth-child(2) > i
 /* Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) 
 {
-   
+    
 }
 
 /* Medium devices (tablets, less than 992px) */
@@ -349,7 +365,12 @@ footer > div > div:nth-child(2) > i
     .toggle-btn
     {
         display: flex;
-        top: 20px;
+        /* top: 25px; */
+    }
+
+    .brand-title
+    {
+        padding: 10px 0;
     }
 
     .navbar-links
@@ -389,11 +410,6 @@ footer > div > div:nth-child(2) > i
     #hero-section
     {
         z-index: -1;
-    }
-
-    .hero-content
-    {
-        padding-top: 3vh;
     }
 
     #features-section > div > div > div:nth-child(1), #features-section > div > div > div:nth-child(4), #features-section > div > div > div:nth-child(5)
@@ -439,6 +455,21 @@ footer > div > div:nth-child(2) > i
         display: none;
     }
 
+}
+
+@media (max-width: 767.98px) and (orientation: landscape)
+{
+    #features-section > div > div > div:nth-child(1), #features-section > div > div > div:nth-child(4), #features-section > div > div > div:nth-child(5)
+    {
+        /* max-width: 100%;
+        justify-items: center; */
+        height: auto;
+    }
+
+    #features-section > div > div img
+    {
+        height: 60vh;
+    }
 }
 
 /* Small devices (landscape phones, less than 768px) */
